@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+
+    <!-- Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Russo One -->
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <!-- Audiowide -->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <!-- VT323 -->
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Press any key to start!</h1>
+    <h2 class="level"></h2>
+    <div class="rules">
+        <h2>&nbsp;&nbsp;Rules <a type="button" id="drop-down-btn">&#9660;</a></h2>
+        <ol class="drop-down-menu">
+            <li>Press any key to start the game.</li>
+            <li>Press the keys in the order they light up.</li>
+            <li>Press the wrong key and you lose.</li>
+            <li>Press the right key and the game will get harder.</li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col" id="maroon">w</div>
+        <div class="col" id="turquoise">e</div>
+    </div>
+    <div class="row">
+        <div class="col" id="seagreen">s</div>
+        <div class="col" id="gold">d</div>
+    </div>
+
+    <footer>
+        <p>Created by Manoj with <span>❤</span> in 2023</p>
+    </footer>
+
+    <!-- Script Links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!-- jQuery CDN -->
+    <script src="index.js" charset="UTF-8"></script>
+</body>
+
+</html>
