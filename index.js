@@ -26,6 +26,7 @@ function game() {
 
     // Remove the Start-Game listener and user-response listener
     $(document).off('keypress');
+    $(document).off('click');
     $('.col').off('click');
 
     // Dislay the level
@@ -128,7 +129,8 @@ function wesdButtonsPressed(event) {
 /*************************************** MAIN ***************************************/
 
 // Press any key to start Listener
-$(document).on('keypress', game); // Call game() on keypress
+$(document).on('keypress', game);   // Call game() on keypress or...
+$(document).on('click', game);      // Call game() on screen-click.
 
 // Drop-down menu listener
 $('#drop-down-btn').click(function () { $('.drop-down-menu').slideToggle(); });
