@@ -98,13 +98,13 @@ footer {
     border-radius: 1rem;
 }
 
+.drop-down-btn {
+    font-size: 2.5rem;
+}
+
 /*************************************************************/
 
 /*********************** ID-wise Styling *********************/
-
-#drop-down-btn {
-    font-size: 2.5rem;
-}
 
 #drop-down-btn:hover {
     cursor: pointer;

@@ -69,11 +69,13 @@ function playButton(elementId) {
 
 function gameOver() {
     playSound('gameOver');
-    $('h1').text('Game Over, Press Any Key to Restart');
+    $('h1').text('Game Over, Tap/Press Any Key to Restart');
     $('.level').text(`Level Reached: ${level}`);
     level = 1;
-    $(document).on('keypress', function () { location.reload();} ); // Reload the page
-    $(document).on('click', function () { location.reload();} );    // Reload the page
+    window.setTimeout(function () {
+        $(document).on('keypress', function () { location.reload();} ); // Reload the page
+        $(document).on('click', function () { location.reload();} );    // Reload the page
+    }, 1000);
 }
 
 function playSound(fileName) {
@@ -134,6 +136,9 @@ $(document).on('keypress', game);   // Call game() on keypress or...
 $(document).on('click', game);      // Call game() on screen-click.
 
 // Drop-down menu listener
-$('#drop-down-btn').click(function () { $('.drop-down-menu').slideToggle(); });
+$('#drop-down-btn').click(function (event) {
+    event.stopPropagation();
+    $('.drop-down-menu').slideToggle(); 
+});
 
 /************************************************************************************/
