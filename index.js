@@ -4,7 +4,7 @@
 // Game level
 var level = 1;
 var goalDelay = 500;            // Delay between each button in the goal sequence (in ms)
-var afterResonseDelay = 1250;   // Delay after user's response (in ms)
+var afterResponseDelay = 1250;   // Delay after user's response (in ms)
 
 // Get all buttons (div.col's) in this order: maroon, turquoise, seagreen, gold
 var buttons = [];
@@ -50,7 +50,7 @@ function game() {
 
 function increaseDifficultyByTime() {
     goalDelay -= 20;
-    afterResonseDelay -= 20;
+    afterResponseDelay -= 20;
 }
 
 function updateGoalSequence() {
@@ -95,7 +95,7 @@ function checkResponse(htmlElement) {
         level++;
         $('.col').off('click');
         $(document).off('keypress');
-        setTimeout(function () { game(); }, afterResonseDelay);
+        setTimeout(function () { game(); }, afterResponseDelay);
     }
 }
 
