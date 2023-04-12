@@ -73,6 +73,7 @@ function gameOver() {
     $('.level').text(`Level Reached: ${level}`);
     level = 1;
     $(document).on('keypress', function () { location.reload();} ); // Reload the page
+    $(document).on('click', function () { location.reload();} );    // Reload the page
 }
 
 function playSound(fileName) {
