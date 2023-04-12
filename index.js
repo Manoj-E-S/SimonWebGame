@@ -49,8 +49,10 @@ function game() {
 }
 
 function increaseDifficultyByTime() {
-    goalDelay -= 20;
-    afterResponseDelay -= 20;
+    if (goalDelay > 100) {
+        goalDelay -= 20;
+        afterResponseDelay -= 20;
+    }
 }
 
 function updateGoalSequence() {
